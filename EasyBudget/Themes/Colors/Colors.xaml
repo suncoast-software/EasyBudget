@@ -1,0 +1,62 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  Colors  -->
+    <Color x:Key="PrimaryDark100">#1c1c1c</Color>
+    <Color x:Key="PrimaryDark200">#2c2c2c</Color>
+    <Color x:Key="PrimaryDark300">#3c3c3c</Color>
+    <Color x:Key="PrimaryDark400">#4c4c4c</Color>
+    <Color x:Key="PrimaryDark500">#5c5c5c</Color>
+    <Color x:Key="SecondaryDark100">#1d1d1d</Color>
+    <Color x:Key="SecondaryDark200">#2d2d2d</Color>
+    <Color x:Key="SecondaryDark300">#3d3d3d</Color>
+    <Color x:Key="SecondaryDark400">#4d4d4d</Color>
+    <Color x:Key="SecondaryDark500">#5d5d5d</Color>
+    <Color x:Key="PrimaryAccent">#6CE700</Color>
+    <Color x:Key="PrimaryDarkBlue">#1167b1</Color>
+    <Color x:Key="PrimaryMediumBlue">#187bcd</Color>
+    <Color x:Key="PrimaryLightBlue">#2a9df4</Color>
+    <Color x:Key="PrimaryOrange">#F7A308</Color>
+    <Color x:Key="SecondaryOrange">#C68308</Color>
+    <Color x:Key="PrimaryYellow">#E2E700</Color>
+    <Color x:Key="SecondaryYellow">#A5A800</Color>
+
+    <!--  Brushes  -->
+    <SolidColorBrush x:Key="PrimaryDarkBrush100" Color="{StaticResource PrimaryDark100}" />
+    <SolidColorBrush x:Key="PrimaryDarkBrush200" Color="{StaticResource PrimaryDark200}" />
+    <SolidColorBrush x:Key="PrimaryDarkBrush300" Color="{StaticResource PrimaryDark300}" />
+    <SolidColorBrush x:Key="PrimaryDarkBrush400" Color="{StaticResource PrimaryDark400}" />
+    <SolidColorBrush x:Key="PrimaryDarkBrush500" Color="{StaticResource PrimaryDark500}" />
+
+    <SolidColorBrush x:Key="SecondaryDarkBrush100" Color="{StaticResource SecondaryDark100}" />
+    <SolidColorBrush x:Key="SecondaryDarkBrush200" Color="{StaticResource SecondaryDark200}" />
+    <SolidColorBrush x:Key="SecondaryDarkBrush300" Color="{StaticResource SecondaryDark300}" />
+    <SolidColorBrush x:Key="SecondaryDarkBrush400" Color="{StaticResource SecondaryDark400}" />
+    <SolidColorBrush x:Key="SecondaryDarkBrush500" Color="{StaticResource SecondaryDark500}" />
+
+    <SolidColorBrush x:Key="PrimaryDarkBlueBrush" Color="{StaticResource PrimaryDarkBlue}" />
+    <SolidColorBrush x:Key="PrimaryMediumBlueBrush" Color="{StaticResource PrimaryMediumBlue}" />
+    <SolidColorBrush x:Key="PrimaryLightBlueBrush" Color="{StaticResource PrimaryLightBlue}" />
+
+    <SolidColorBrush x:Key="PrimaryOrangeBrush" Color="{StaticResource PrimaryOrange}" />
+    <SolidColorBrush x:Key="SecondaryOrangeBrush" Color="{StaticResource SecondaryOrange}" />
+
+    <SolidColorBrush x:Key="PrimaryYellowBrush" Color="{StaticResource PrimaryYellow}" />
+    <SolidColorBrush x:Key="SecondaryYellowBrush" Color="{StaticResource SecondaryYellow}" />
+
+    <SolidColorBrush x:Key="PrimaryAccentBrush" Color="{StaticResource PrimaryAccent}" />
+
+    <!--  Gradient Brushes  -->
+    <LinearGradientBrush x:Key="Primary100ToSecondary200GradientBrush" StartPoint="1, 0" EndPoint="1, 1">
+        <GradientStop Offset="1" Color="{StaticResource PrimaryDark100}" />
+        <GradientStop Offset="0" Color="{StaticResource SecondaryDark200}" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="PrimaryOrangeToSecondaryOrange" StartPoint="1, 0" EndPoint="1, 1">
+        <GradientStop Offset="1" Color="{StaticResource PrimaryOrange}" />
+        <GradientStop Offset="0" Color="{StaticResource SecondaryOrange}" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="SecondarYellowToPrimaryYellow" StartPoint="0.5, 0" EndPoint="1, 1">
+        <GradientStop Offset="1" Color="{StaticResource SecondaryYellow}" />
+        <GradientStop Offset="0" Color="{StaticResource PrimaryYellow}" />
+    </LinearGradientBrush>
+</ResourceDictionary>
