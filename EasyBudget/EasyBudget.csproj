@@ -10,7 +10,7 @@
   <ItemGroup>
     <Folder Include="Data\Factories\" />
     <Folder Include="MVVM\Models\" />
-    <Folder Include="MVVM\Views\" />
+    <Folder Include="MVVM\Views\Message\" />
     <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 
