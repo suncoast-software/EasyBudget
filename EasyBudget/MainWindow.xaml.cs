@@ -24,5 +24,11 @@ namespace EasyBudget
         {
             InitializeComponent();
         }
+
+        private void Border_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
     }
 }
