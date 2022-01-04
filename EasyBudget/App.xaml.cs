@@ -1,13 +1,8 @@
-﻿using EasyBudget.MVVM.ViewModels;
+﻿using EasyBudget.Data.Factories;
+using EasyBudget.MVVM.ViewModels;
 using EasyBudget.Navigation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace EasyBudget
@@ -23,6 +18,7 @@ namespace EasyBudget
             {
                 services.AddSingleton<AppViewModel>();
                 services.AddSingleton<Navigator>();
+                services.AddTransient<AppDbContextFactory>();
                 services.AddSingleton<MainWindow>(s => new MainWindow()
                 {
                     DataContext = s.GetRequiredService<AppViewModel>()

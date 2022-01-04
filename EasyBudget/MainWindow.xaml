@@ -6,6 +6,7 @@
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:nav="clr-namespace:EasyBudget.MVVM.Views.NavBar"
         xmlns:vm="clr-namespace:EasyBudget.MVVM.ViewModels"
+        xmlns:dash="clr-namespace:EasyBudget.MVVM.Views.Dashboard"
         xmlns:local="clr-namespace:EasyBudget"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -133,16 +134,16 @@
                 </Grid>
             </Border>
             <!-- END NAVBAR -->
-            <ContentControl Grid.Column="1"
+            <ContentControl Grid.Column="2"
                             Grid.Row="2"
                             Grid.ColumnSpan="2"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
                             Content="{Binding Path=CurrentViewModel}">
                 <ContentControl.Resources>
-                   <!-- <DataTemplate DataType="{x:Type vm:LoginViewModel}">
-                        <uc:LoginView/>
-                    </DataTemplate>-->
+                    <DataTemplate DataType="{x:Type vm:DashboardViewModel}">
+                        <dash:DashboardView/>
+                    </DataTemplate>
                    
                 </ContentControl.Resources>
             </ContentControl>
