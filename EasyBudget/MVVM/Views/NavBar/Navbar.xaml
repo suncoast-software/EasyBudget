@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:EasyBudget.MVVM.Views.NavBar"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="150">
+             d:DesignHeight="600" d:DesignWidth="105">
     <Grid>
-        <Border Width="145"
+        <Border Width="105"
             Height="600"
         CornerRadius="12"
             Background="{StaticResource PrimaryDarkBrush200}"
@@ -16,6 +17,34 @@
             <Border.Effect>
                 <DropShadowEffect BlurRadius="6" ShadowDepth="6" Direction="270" Color="#000" Opacity=".6"/>
             </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="1"
+                        Width="70"
+                        Height="50"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Command="{Binding NavigateDashboardCommand}">
+                    <md:PackIcon Kind="ViewDashboard"
+                                 Width="50"
+                                 Height="50"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 Foreground="{StaticResource PrimaryDarkBrush400}"/>
+                </Button>
+            </Grid>
         </Border>
     </Grid>
    

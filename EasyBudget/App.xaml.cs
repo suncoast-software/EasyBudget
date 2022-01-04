@@ -1,4 +1,5 @@
 ﻿using EasyBudget.MVVM.ViewModels;
+using EasyBudget.Navigation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -21,7 +22,7 @@ namespace EasyBudget
             _host = Host.CreateDefaultBuilder().ConfigureServices(services =>
             {
                 services.AddSingleton<AppViewModel>();
-
+                services.AddSingleton<Navigator>();
                 services.AddSingleton<MainWindow>(s => new MainWindow()
                 {
                     DataContext = s.GetRequiredService<AppViewModel>()

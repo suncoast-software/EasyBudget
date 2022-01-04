@@ -9,11 +9,12 @@ using System.Windows.Input;
 
 namespace EasyBudget.MVVM.ViewModels
 {
-    internal class AppViewModel : BaseViewModel
+    internal class NavbarViewModel: BaseViewModel
     {
-        private readonly Navigator? _navigator;
+        private readonly Navigator _navigator;
         public ICommand NavigateDashboardCommand { get; }
-        public AppViewModel(Navigator? navigator)
+
+        public NavbarViewModel(Navigator navigator)
         {
             _navigator = navigator;
             NavigateDashboardCommand = new NavigateCommand<DashboardViewModel>(_navigator, () => new DashboardViewModel(_navigator));
