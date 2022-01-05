@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EasyBudget.MVVM.Views.Dashboard
+namespace EasyBudget.MVVM.Views
 {
     /// <summary>
     /// Interaction logic for DashboardView.xaml

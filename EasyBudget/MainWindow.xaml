@@ -6,7 +6,7 @@
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:nav="clr-namespace:EasyBudget.MVVM.Views.NavBar"
         xmlns:vm="clr-namespace:EasyBudget.MVVM.ViewModels"
-        xmlns:dash="clr-namespace:EasyBudget.MVVM.Views.Dashboard"
+        xmlns:views="clr-namespace:EasyBudget.MVVM.Views"
         xmlns:local="clr-namespace:EasyBudget"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -155,7 +155,7 @@
                             Content="{Binding Path=CurrentViewModel}">
                 <ContentControl.Resources>
                     <DataTemplate DataType="{x:Type vm:DashboardViewModel}">
-                        <dash:DashboardView/>
+                        <views:DashboardView/>
                     </DataTemplate>
                    
                 </ContentControl.Resources>
