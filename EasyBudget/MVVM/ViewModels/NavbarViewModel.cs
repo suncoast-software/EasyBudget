@@ -17,7 +17,7 @@ namespace EasyBudget.MVVM.ViewModels
         public NavbarViewModel(Navigator navigator)
         {
             _navigator = navigator;
-            NavigateDashboardCommand = new NavigateCommand<DashboardViewModel>(_navigator, () => new DashboardViewModel(_navigator));
+            
         }
     }
 }

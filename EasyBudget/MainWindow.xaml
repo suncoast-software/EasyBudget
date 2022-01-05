@@ -131,6 +131,19 @@
                                  VerticalAlignment="Center"
                                  Foreground="{StaticResource PrimaryDarkBrush400}"/>
                     </Button>
+                    <Button Grid.Row="8"
+                        Width="70"
+                        Height="50"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Command="{Binding NavigateSettingsCommand}">
+                        <md:PackIcon Kind="Settings"
+                                 Width="50"
+                                 Height="50"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 Foreground="{StaticResource PrimaryDarkBrush400}"/>
+                    </Button>
                 </Grid>
             </Border>
             <!-- END NAVBAR -->

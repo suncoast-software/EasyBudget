@@ -16,12 +16,13 @@ namespace EasyBudget.MVVM.ViewModels
         private readonly AppDbContextFactory _dbFactory;
         public BaseViewModel? CurrentViewModel => _navigator.CurrentViewModel;
         public ICommand NavigateDashboardCommand { get; }
+        public ICommand NavigateSettingsCommand { get; }
         public AppViewModel(AppDbContextFactory dbFactory, Navigator? navigator)
         {
             _dbFactory = dbFactory;
             _navigator = navigator;
             _navigator.CurrentViewModelChanged += OnCurrentViewModelChanged;
-            NavigateDashboardCommand = new NavigateCommand<DashboardViewModel>(_navigator, () => new DashboardViewModel(_navigator));
+            NavigateDashboardCommand = new NavigateCommand<DashboardViewModel>(_navigator, () => new DashboardViewModel(_dbFactory, _navigator));
         }
 
         private void OnCurrentViewModelChanged()

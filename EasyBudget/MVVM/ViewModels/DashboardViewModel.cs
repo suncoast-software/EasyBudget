@@ -1,4 +1,5 @@
-﻿using EasyBudget.Navigation;
+﻿using EasyBudget.Data.Factories;
+using EasyBudget.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,11 @@ namespace EasyBudget.MVVM.ViewModels
     internal class DashboardViewModel: BaseViewModel
     {
         private readonly Navigator _navigator;
+        private readonly AppDbContextFactory _dbFactory;
 
-        public DashboardViewModel(Navigator navigator)
+        public DashboardViewModel(AppDbContextFactory dbFactory, Navigator navigator)
         {
+            _dbFactory = dbFactory;
             _navigator = navigator;
         }
     }
