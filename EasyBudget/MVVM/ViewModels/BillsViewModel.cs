@@ -16,7 +16,7 @@ namespace EasyBudget.MVVM.ViewModels
         private readonly Navigator _navigator;
         private readonly AppDbContextFactory _dbFactory;
 
-        public ICommand AddNewBillCommand { get; set; }
+        public ICommand AddNewBillNavigateCommand { get; set; }
 
         private List<Bill> _bills;
         public List<Bill> Bills
@@ -29,14 +29,9 @@ namespace EasyBudget.MVVM.ViewModels
         {
             _dbFactory = dbFactory;
             _navigator = navigator;
-            AddNewBillCommand = new RelayCommand(AddNewBill);
+            AddNewBillNavigateCommand = new NavigateCommand<AddBillViewModel>(_navigator, () => new AddBillViewModel(_dbFactory, _navigator));
             Bills = new List<Bill>();
             LoadBills();
-        }
-
-        private void AddNewBill()
-        {
-            throw new NotImplementedException();
         }
 
         private void LoadBills()
