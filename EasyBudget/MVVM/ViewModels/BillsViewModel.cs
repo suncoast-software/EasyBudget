@@ -1,4 +1,5 @@
 ﻿using EasyBudget.Data.Factories;
+using EasyBudget.MVVM.Commands;
 using EasyBudget.MVVM.Models;
 using EasyBudget.Navigation;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace EasyBudget.MVVM.ViewModels
 {
@@ -13,6 +15,8 @@ namespace EasyBudget.MVVM.ViewModels
     {
         private readonly Navigator _navigator;
         private readonly AppDbContextFactory _dbFactory;
+
+        public ICommand AddNewBillCommand { get; set; }
 
         private List<Bill> _bills;
         public List<Bill> Bills
@@ -25,8 +29,14 @@ namespace EasyBudget.MVVM.ViewModels
         {
             _dbFactory = dbFactory;
             _navigator = navigator;
+            AddNewBillCommand = new RelayCommand(AddNewBill);
             Bills = new List<Bill>();
             LoadBills();
+        }
+
+        private void AddNewBill()
+        {
+            throw new NotImplementedException();
         }
 
         private void LoadBills()

@@ -4,14 +4,52 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:uc="clr-namespace:EasyBudget.MVVM.Views"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:EasyBudget.MVVM.Views"
              mc:Ignorable="d" 
              Height="630" Width="1050">
     <Grid>
-        <ScrollViewer Grid.Column="1" 
-                      Grid.Row="1"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="January 2022"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       Foreground="{StaticResource PrimaryDarkBrush500}"/>
+            <StackPanel Grid.Row="0"
+                    Grid.Column="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="40 0">
+                <Button Width="80"
+                    Height="60"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}"
+                    BorderThickness="0"
+                    Command="{Binding AddNewBillCommand}">
+                    <md:PackIcon Kind="AddBox"
+                             Width="60"
+                             Height="50"
+                             Foreground="{StaticResource PrimaryDarkBrush400}"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+       
+        <ScrollViewer Grid.Row="1"
                       Grid.RowSpan="2"
-                      Margin="20 40 20 0"
+                      Margin="20 10 20 0"
                       VerticalScrollBarVisibility="Auto"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center">
