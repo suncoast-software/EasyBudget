@@ -131,6 +131,19 @@
                                  VerticalAlignment="Center"
                                  Foreground="{StaticResource PrimaryDarkBrush400}"/>
                     </Button>
+                    <Button Grid.Row="2"
+                        Width="70"
+                        Height="50"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Command="{Binding NavigateBillsCommand}">
+                        <md:PackIcon Kind="Payment"
+                                 Width="50"
+                                 Height="50"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 Foreground="{StaticResource PrimaryDarkBrush400}"/>
+                    </Button>
                     <Button Grid.Row="8"
                         Width="70"
                         Height="50"
@@ -157,7 +170,10 @@
                     <DataTemplate DataType="{x:Type vm:DashboardViewModel}">
                         <views:DashboardView/>
                     </DataTemplate>
-                   
+                    <DataTemplate DataType="{x:Type vm:BillsViewModel}">
+                        <views:BillsView/>
+                    </DataTemplate>
+
                 </ContentControl.Resources>
             </ContentControl>
         </Grid>

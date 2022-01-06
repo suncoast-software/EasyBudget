@@ -5,13 +5,24 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EasyBudget.MVVM.Views"
              mc:Ignorable="d" 
-             Height="90" Width="870">
+             Height="84" Width="920">
 
-    <Border CornerRadius="16" 
+    <Border CornerRadius="12" 
             Background="{StaticResource Primary100ToSecondary200GradientBrush}"
             Height="80">
+        <Border.Style>
+            <Style TargetType="Border">
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="BorderBrush" Value="WhiteSmoke"/>
+                        <Setter Property="BorderThickness" Value=".5"/>
+                        <Setter Property="Opacity" Value=".8"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
         <Border.Effect>
-            <DropShadowEffect BlurRadius="4" ShadowDepth="4"
+            <DropShadowEffect BlurRadius="2" ShadowDepth="2"
                               Direction="270" Color="#000"
                               Opacity=".5"/>
         </Border.Effect>
@@ -22,57 +33,58 @@
                            FontSize="18"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
-                <TextBlock Text="Payee"
+
+                <TextBlock Text="{Binding Path=PayeeName, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
                            Foreground="{StaticResource PrimaryAccentBrush}"
-                           FontSize="22"
+                           FontSize="14"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Margin="10" Width="110" Height="60">
+            <StackPanel Orientation="Vertical" Margin="10" Width="150" Height="60">
                 <TextBlock Text="Account#"
                            Foreground="{StaticResource PrimaryDarkBrush300}"
                            FontSize="18"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
-                <TextBlock Text="Account#"
+                <TextBlock Text="{Binding Path=AccountNumber, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
                            Foreground="{StaticResource PrimaryAccentBrush}"
-                           FontSize="22"
+                           FontSize="14"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Margin="10" Width="140" Height="60">
-                <TextBlock Text="Amount Due"
+            <StackPanel Orientation="Vertical" Margin="10" Width="90" Height="60">
+                <TextBlock Text="Due"
                            Foreground="{StaticResource PrimaryDarkBrush300}"
                            FontSize="18"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
-                <TextBlock Text="Amount Due"
+                <TextBlock Text="{Binding Path=DueAmount, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
                            Foreground="{StaticResource PrimaryAccentBrush}"
-                           FontSize="22"
+                           FontSize="14"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Margin="10" Width="120" Height="60">
+            <StackPanel Orientation="Vertical" Margin="10" Width="150" Height="60">
                 <TextBlock Text="Due Date"
                            Foreground="{StaticResource PrimaryDarkBrush300}"
                            FontSize="18"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
-                <TextBlock Text="Due Date"
+                <TextBlock Text="{Binding Path=DateDue, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
                            Foreground="{StaticResource PrimaryAccentBrush}"
-                           FontSize="22"
+                           FontSize="14"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Margin="10" Width="120" Height="60">
+            <StackPanel Orientation="Vertical" Margin="10" Width="150" Height="60">
                 <TextBlock Text="Paid Date"
                            Foreground="{StaticResource PrimaryDarkBrush300}"
                            FontSize="18"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
-                <TextBlock Text="Paid Date"
+                <TextBlock Text="{Binding Path=PaidDate, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
                            Foreground="{StaticResource PrimaryAccentBrush}"
-                           FontSize="22"
+                           FontSize="14"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
             </StackPanel>
@@ -82,9 +94,9 @@
                            FontSize="18"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
-                <TextBlock Text="Confirmation"
+                <TextBlock Text="{Binding Path=ConfirmationNumber, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
                            Foreground="{StaticResource PrimaryAccentBrush}"
-                           FontSize="22"
+                           FontSize="14"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
             </StackPanel>
