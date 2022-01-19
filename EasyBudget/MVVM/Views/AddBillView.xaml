@@ -96,6 +96,48 @@
                           md:CheckBoxAssist.CheckBoxSize="16"
                           Margin="10 0"
                           Height="40"/>
+
+                <StackPanel Orientation="Horizontal"
+                            Grid.Row="9"
+                            Grid.Column="2"
+                            HorizontalAlignment="Right">
+                    <Button Width="60"
+                            Height="40"
+                            Background="{x:Null}"
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Center">
+                        <md:PackIcon Kind="ContentSave"
+                                     Width="40"
+                                     Height="40"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"
+                                     Foreground="{StaticResource PrimaryAccentBrush}"/>
+                    </Button>
+                    <Button Width="60"
+                            Height="40"
+                            Background="{x:Null}"
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Center">
+                        <md:PackIcon Kind="Download"
+                                     Width="40"
+                                     Height="40"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"
+                                     Foreground="{StaticResource PrimaryAccentBrush}"/>
+                    </Button>
+                    <Button Width="60"
+                            Height="40"
+                            Background="{x:Null}"
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Center">
+                        <md:PackIcon Kind="CancelBold"
+                                     Width="40"
+                                     Height="40"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"
+                                     Foreground="Red"/>
+                    </Button>
+                </StackPanel>
             </Grid>
         </Border>
     </Grid>
