@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EasyBudget.MVVM.Views"
              mc:Ignorable="d" 
-             Height="84" Width="920">
+             Height="84" Width="980">
 
     <Border CornerRadius="12" 
             Background="{StaticResource Primary100ToSecondary200GradientBrush}"
@@ -99,6 +99,22 @@
                            FontSize="14"
                            FontWeight="Bold"
                            TextAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <Button Content="EDIT"
+                        Margin="2"
+                        Style="{StaticResource MaterialDesignFlatDarkButton}"
+                        Foreground="{StaticResource PrimaryAccentBrush}">
+                    
+                </Button>
+                <Button Content="VIEW"
+                        Margin="2"
+                        Style="{StaticResource MaterialDesignFlatDarkButton}"
+                        Foreground="{StaticResource PrimaryAccentBrush}">
+
+                </Button>
             </StackPanel>
         </StackPanel>
     </Border>
