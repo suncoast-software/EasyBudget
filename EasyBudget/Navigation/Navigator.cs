@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EasyBudget.Navigation
 {
-    internal class Navigator
+    internal class Navigator: INavigator
     {
         public event Action? CurrentViewModelChanged;
 

@@ -10,10 +10,10 @@ namespace EasyBudget.MVVM.ViewModels
 {
     internal class DashboardViewModel: BaseViewModel
     {
-        private readonly Navigator _navigator;
+        private readonly INavigator _navigator;
         private readonly AppDbContextFactory _dbFactory;
 
-        public DashboardViewModel(AppDbContextFactory dbFactory, Navigator navigator)
+        public DashboardViewModel(AppDbContextFactory dbFactory, INavigator navigator)
         {
             _dbFactory = dbFactory;
             _navigator = navigator;

@@ -11,9 +11,9 @@ namespace EasyBudget.MVVM.Commands
     internal class NavigateCommand<TViewModel> : CommandBase
      where TViewModel : BaseViewModel
     {
-        private readonly Navigator _navigator;
+        private readonly INavigator _navigator;
         private readonly Func<TViewModel> _createViewModel;
-        public NavigateCommand(Navigator navigator, Func<TViewModel> createViewModel)
+        public NavigateCommand(INavigator navigator, Func<TViewModel> createViewModel)
         {
             _navigator = navigator;
             _createViewModel = createViewModel;

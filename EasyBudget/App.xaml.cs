@@ -19,7 +19,7 @@ namespace EasyBudget
             _host = Host.CreateDefaultBuilder().ConfigureServices(services =>
             {
                 services.AddSingleton<AppViewModel>();
-                services.AddSingleton<Navigator>();
+                services.AddSingleton<INavigator, Navigator>();
                 services.AddTransient<AppDbContextFactory>();
                 services.AddSingleton<MainWindow>(s => new MainWindow()
                 {

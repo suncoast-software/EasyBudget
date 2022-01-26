@@ -13,7 +13,7 @@ namespace EasyBudget.MVVM.ViewModels
 {
     internal class BillsViewModel: BaseViewModel
     {
-        private readonly Navigator _navigator;
+        private readonly INavigator _navigator;
         private readonly AppDbContextFactory _dbFactory;
 
         public ICommand AddNewBillNavigateCommand { get; set; }
@@ -25,7 +25,7 @@ namespace EasyBudget.MVVM.ViewModels
             set => OnPropertyChanged(ref _bills, value);
         }
 
-        public BillsViewModel(AppDbContextFactory dbFactory, Navigator navigator)
+        public BillsViewModel(AppDbContextFactory dbFactory, INavigator navigator)
         {
             _dbFactory = dbFactory;
             _navigator = navigator;

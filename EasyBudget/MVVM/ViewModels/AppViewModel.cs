@@ -12,12 +12,12 @@ namespace EasyBudget.MVVM.ViewModels
 {
     internal class AppViewModel : BaseViewModel
     {
-        private readonly Navigator? _navigator;
+        private readonly INavigator? _navigator;
         private readonly AppDbContextFactory _dbFactory;
         public BaseViewModel? CurrentViewModel => _navigator.CurrentViewModel;
         public ICommand NavigateDashboardCommand { get; }
         public ICommand NavigateBillsCommand { get; }
-        public AppViewModel(AppDbContextFactory dbFactory, Navigator? navigator)
+        public AppViewModel(AppDbContextFactory dbFactory, INavigator? navigator)
         {
             _dbFactory = dbFactory;
             _navigator = navigator;

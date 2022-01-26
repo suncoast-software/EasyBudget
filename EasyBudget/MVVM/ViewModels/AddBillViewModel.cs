@@ -13,11 +13,11 @@ namespace EasyBudget.MVVM.ViewModels
     internal class AddBillViewModel: BaseViewModel
     {
         private readonly AppDbContextFactory _dbFactory;
-        private readonly Navigator _navigator;
+        private readonly INavigator _navigator;
 
         public ICommand AddBillCommand { get; set; }
 
-        public AddBillViewModel(AppDbContextFactory dbFactory, Navigator navigator)
+        public AddBillViewModel(AppDbContextFactory dbFactory, INavigator navigator)
         {
             _dbFactory = dbFactory;
             _navigator = navigator;
