@@ -1,6 +1,8 @@
 ﻿using EasyBudget.Data.Factories;
 using EasyBudget.MVVM.ViewModels;
 using EasyBudget.Navigation;
+using EasyBudget.Services;
+using EasyBudget.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -12,7 +14,6 @@ namespace EasyBudget
     public partial class App : Application
     {
         internal readonly IHost _host;
-        private ILogger _logger;
 
         public App()
         {
@@ -20,6 +21,7 @@ namespace EasyBudget
             {
                 services.AddSingleton<AppViewModel>();
                 services.AddSingleton<INavigator, Navigator>();
+                services.AddSingleton<ILoggerService, LoggerService>();
                 services.AddTransient<AppDbContextFactory>();
                 services.AddSingleton<MainWindow>(s => new MainWindow()
                 {
